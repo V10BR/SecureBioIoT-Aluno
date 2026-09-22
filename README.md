@@ -15,40 +15,21 @@ O **SecureBioIoT** visa projetar, implementar e avaliar uma arquitetura de baixo
 
 A transmissão de dados ocorre no seguinte fluxo modular:
 
-+-------------------------------------------------------+
-|                 1. FONTE DE DADOS                     |
-|  Bases Públicas / Dados Sintéticos de ECG (Anonimizados)|
-+-------------------------------------------------------+
-                           |
-                           v
-+-------------------------------------------------------+
-|                 2. DISPOSITIVO IoT                    |
-|                    (ESP32)                            |
-|  - Processamento do sinal biomédico                   |
-|  - Aplicação dos Controles de Segurança               |
-|    (Cifragem, Autenticação, Integridade)              |
-+-------------------------------------------------------+
-                           |
-                           v
-+-------------------------------------------------------+
-|               3. CANAL DE COMUNICAÇÃO                 |
-|             (Wi-Fi / MQTT / TCP com TLS)              |
-+-------------------------------------------------------+
-                           |
-                           v
-+-------------------------------------------------------+
-|                 4. SERVIDOR / BACKEND                 |
-|  - Recepção e Validação dos Pacotes                   |
-|  - Descifragem e Verificação de Integridade           |
-|  - Armazenamento Seguro e Registos de Auditoria (Logs)|
-+-------------------------------------------------------+
-                           |
-                           v
-+-------------------------------------------------------+
-|              5. MÉTRICAS E AVALIAÇÃO                  |
-|  - Análise de Desempenho (Latência, CPU, Memória)     |
-|  - Validação para o TCC / Artigo Científico           |
-+-------------------------------------------------------+
+```text
+[ Dados ECG Públicos ]
+          │
+          ▼
+[ ESP32 (Processamento & Cifragem) ]
+          │
+          ▼
+[ Rede (Wi-Fi / TLS) ]
+          │
+          ▼
+[ Servidor Backend (Validação & Logs) ]
+          │
+          ▼
+[ Análise de Métricas (CPU, Latência, Memória) ]
+```
 ## 🛠️ Tecnologias e Ferramentas
 
 * **Microcontrolador:** ESP32
