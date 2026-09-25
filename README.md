@@ -1,38 +1,81 @@
-# SecureBioIoT — Arquitetura Segura para Transmissão de Sinais Biomédicos em Dispositivos IoT
+# SecureBioIoT
 
-Subprojeto de Iniciação Científica (IC) vinculado ao projeto guarda-chuva **"Inteligência Artificial Confiável e Segura Aplicada à Saúde Digital"** da **Universidade Federal de Itajubá (UNIFEI)**.
+## Arquitetura segura para transmissão de sinais biomédicos em dispositivos IoT
 
----
+O **SecureBioIoT** é um projeto voltado ao estudo de segurança em sistemas IoT aplicados à transmissão de sinais biomédicos.
 
-## 📌 Descrição do Projeto
+O projeto busca desenvolver uma arquitetura capaz de transmitir dados biomédicos de forma segura, considerando aspectos como **confidencialidade, integridade, autenticação e confiabilidade**.
 
-O **SecureBioIoT** visa projetar, implementar e avaliar uma arquitetura de baixo custo baseada em dispositivos IoT (**ESP32**) para a transmissão de sinais eletrocardiográficos (ECG) com garantias de segurança. 
+## Objetivos
 
+* Estudar a aplicação de segurança em dispositivos IoT.
+* Desenvolver um protótipo utilizando ESP32.
+* Trabalhar com sinais de ECG públicos ou sintéticos.
+* Implementar comunicação entre dispositivo e servidor.
+* Aplicar mecanismos de segurança à transmissão dos dados.
+* Avaliar o funcionamento e a segurança da arquitetura desenvolvida.
 
----
+## Arquitetura
 
-## 🔄 Fluxo de Dados e Arquitetura do Sistema
-
-A transmissão de dados ocorre no seguinte fluxo modular:
+O sistema utiliza um fluxo de comunicação entre um dispositivo IoT e um servidor:
 
 ```text
-[ Dados ECG Públicos ]
-          │
-          ▼
-[ ESP32 (Processamento & Cifragem) ]
-          │
-          ▼
-[ Rede (Wi-Fi / TLS) ]
-          │
-          ▼
-[ Servidor Backend (Validação & Logs) ]
-          │
-          ▼
-[ Análise de Métricas (CPU, Latência, Memória) ]
+Sinal ECG
+   |
+   v
+ESP32
+   |
+   v
+Rede(MQTT)
+   |
+   v
+Servidor
 ```
-## 🛠️ Tecnologias e Ferramentas
 
-* **Microcontrolador:** ESP32
-* **Linguagens de Programação:** C/C++ (firmware ESP32) e Python (backend/scripts de simulação)
-* **Protocolos & Comunicação:** TCP/IP, MQTT, HTTP, TLS/SSL
-* **Versionamento & Gestão:** Git, GitHub, VS Code
+A arquitetura poderá ser expandida conforme o desenvolvimento do projeto.
+
+## Tecnologias
+
+* ESP32
+* MQTT
+* Wi-Fi
+* TCP/IP
+* Python
+* C/C++
+* Git
+
+## Segurança
+
+Entre os conceitos abordados pelo projeto estão:
+
+* Autenticação
+* Autorização
+* Criptografia
+* Integridade de dados
+* Proteção contra replay
+* Gestão de credenciais
+* Auditoria e registros de eventos
+
+## Estrutura
+
+```text
+SecureBioIoT/
+├── backend/
+├── firmware/
+├── docs/
+├── experiments/
+├── scripts/
+├── tests/
+└── README.md
+```
+
+A estrutura do projeto poderá ser alterada conforme sua evolução.
+
+## Status
+
+Em desenvolvimento.
+
+## Projeto
+
+**SecureBioIoT**
+Cibersegurança, IoT e Saúde Digital
