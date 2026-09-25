@@ -1,4 +1,5 @@
 https://youtube.com/playlist?list=PLRc6ZYt68prXeud4anb1DYM_k7Zl2ng0K&si=hwM3FQZaovueaXsL
+https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6
 
 Realizando o curso Python Essentials 1 pela Cisco
 
